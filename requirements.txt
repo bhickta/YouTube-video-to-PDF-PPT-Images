@@ -1,0 +1,10 @@
+certifi @ file:///opt/conda/conda-bld/certifi_1655968806487/work/certifi
+fpdf==1.7.2
+lxml==4.9.0
+numpy==1.21.6
+opencv-python==4.6.0.66
+pafy==0.5.5
+Pillow==9.1.1
+python-pptx==0.6.21
+XlsxWriter==3.0.3
+youtube-dl==2021.12.17
