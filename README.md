@@ -1,14 +1,14 @@
-# YouTube-video-to-PDF
-Takes in a URL of a YouTube video and outputs a PDF comprising of all the unique frames. 
+# YouTube-video-to-PDF-PPT-Images
+Takes in a URL of a YouTube video and outputs a PDF/PPT/Images comprising of all the unique frames. 
 
 ### Create a conda environment
 ```
-$ conda create --name video2pdf python=3.7
-$ conda activate video2pdf
+$ conda create --name url_convert python=3.7
+$ conda activate url_convert
 ```
 ### Install the required dependencies
 ```
-$ cd YouTube-video-to-PDF
+$ cd YouTube-video-to-PDF-PPT-Images
 $ pip install -r requirements.txt
 ```
 ### Demo of video2pdf
