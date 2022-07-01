@@ -33,10 +33,7 @@ Refer [pyimagesearch](https://pyimagesearch.com/2020/04/20/detect-and-remove-dup
 ```
 "--url", YouTube-video URL (required)
 "--file", Required file type: 'pdf', 'ppt', 'images' (required)
-"--skip", Starting seconds to skip 
-(defaut: 0)
-"--path", Download location
-(default: ./Output/)
-"--download", Downloads video only
-(default: False)
+"--skip", Starting seconds to skip (defaut: 0)
+"--path", Download location (default: ./Output/)
+"--download", Downloads video only (default: False)
 ```
