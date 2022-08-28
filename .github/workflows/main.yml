@@ -71,6 +71,6 @@ jobs:
         uses: ftnext/action-push-ghpages@v1.0.0
         with:
           # Path to the directory where the static assets are located.
-          build_dir: .
+          build_dir: /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output
           # Create github token in repo/settings/secrets/actions with name GithubToken
           github_token: ${{ secrets.GithubToken }} # GithubToken: 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
