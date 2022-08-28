@@ -47,6 +47,7 @@ jobs:
       - name: Installing requirements.txt
         run: |
           pip install -r requirements.txt
+          pip install git+https://github.com/Cupcakus/pafy
       
       # Creating Output folder
       - name: Creating "Output" folder
