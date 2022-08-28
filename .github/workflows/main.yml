@@ -26,6 +26,7 @@ jobs:
       # Create a conda environment
       - name: Creating a conda environment
         run: |
+          conda init bash
           conda create --name url_convert python=3.7
           conda activate url_convert
           
