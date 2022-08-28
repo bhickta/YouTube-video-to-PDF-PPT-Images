@@ -27,8 +27,8 @@ jobs:
           conda create --name url_convert python=3.7
           conda create --name url_convert python=3.7
           pip install -r requirements.txt
-          python main.py --skip 10 --file pdf --url https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF0
+          python main.py --path /home/runner/work/ --skip 10 --file pdf --url https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF0
       - name: ls
         run: |
-          cd /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images
+          cd /home/runner/work/
           ls
