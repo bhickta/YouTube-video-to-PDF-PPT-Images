@@ -44,9 +44,9 @@ jobs:
           # Version of Python to use. If indicated at `condaFile`, then that one is used.
           pythonVersion: 3.7
 
-      - name: Installing requirement.txt
+      - name: Installing requirements.txt
         run: |
-          pip install -r requirement.txt
+          pip install -r requirements.txt
       
       # Creating Output folder
       - name: Creating "Output" folder
