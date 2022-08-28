@@ -29,6 +29,10 @@ jobs:
 #          conda create --name url_convert python=3.7
 #          conda init bash
 #          conda activate url_convert
+
+    # custom directory for the virtual environment
+    custom_virtualenv_dir: # optional, default is .venv
+
       - name: Configure conda
         # You may pin to the exact commit or the version.
         # uses: pyrunit/conda-setup-action@29c8cc6086406204287cfc7d88eb9f45727cd51e
@@ -42,11 +46,11 @@ jobs:
           activate: true
           # Version of Python to use. If indicated at `condaFile`, then that one is used.
           pythonVersion: 3.7
-          
-      # Install the required dependencies
-      - name: Installing required dependencies
-        run: |
-          pip install -r requirements.txt
+
+      - name: create a python virtualenv
+        # You may pin to the exact commit or the version.
+        # uses: syphar/restore-virtualenv@c23446cde59e2779e6bf8f4dc27aa5c0d6b9ec97
+        uses: syphar/restore-virtualenv@v1
           
       # Creating Output folder
       - name: Creating "Output" folder
