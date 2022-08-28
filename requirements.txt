@@ -2,7 +2,6 @@ fpdf==1.7.2
 lxml==4.9.0
 numpy==1.21.6
 opencv-python==4.6.0.66
--e git+git://github.com/mohamed-challal/pafy.git@develop#egg=pafy
 Pillow==9.1.1
 python-pptx==0.6.21
 XlsxWriter==3.0.3
