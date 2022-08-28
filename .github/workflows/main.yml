@@ -64,6 +64,6 @@ jobs:
         env:
           REPO: self
           BRANCH: gh-pages
-          FOLDER: /home/runner/work/gpq4utjefs.github.io/gpq4utjefs.github.io/gpq4utjefs.github.io
+          FOLDER: .
           GITHUB_TOKEN: ${{ secrets.GithubToken }}
           # GithubToken: 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
