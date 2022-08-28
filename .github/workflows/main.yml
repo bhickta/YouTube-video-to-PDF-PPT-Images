@@ -24,7 +24,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Checking in which directory I am in
         run: |
-          git clone git@github.com:ninjakx/youtube-video2ppt.git
+          git clone https://github.com/ninjakx/youtube-video2ppt.git
           cd youtube-video2ppt
           pip install -r requirements.txt
           bash vid2ppt.sh
