@@ -27,7 +27,11 @@ jobs:
           git clone https://github.com/ninjakx/youtube-video2ppt.git
           cd youtube-video2ppt
           pip install -r requirements.txt
+          mkdir my_notes
           bash vid2ppt.sh
           https://www.youtube.com/watch?v=nVtlzJ9I244
+          my_notes
           5
+          ls
+          cd my_notes
           ls
