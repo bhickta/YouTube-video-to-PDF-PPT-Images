@@ -30,9 +30,6 @@ jobs:
 #          conda init bash
 #          conda activate url_convert
 
-    # custom directory for the virtual environment
-    custom_virtualenv_dir: # optional, default is .venv
-
       - name: Configure conda
         # You may pin to the exact commit or the version.
         # uses: pyrunit/conda-setup-action@29c8cc6086406204287cfc7d88eb9f45727cd51e
