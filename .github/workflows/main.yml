@@ -63,6 +63,7 @@ jobs:
       - name: Present working directory
         run: |
           pwd
+          cd Output
           ls
       
       - name: Force push branch
@@ -71,6 +72,6 @@ jobs:
         uses: dfm/force-push-branch-action@v1
         with:
           github-token: ${{ secrets.GithubToken }} # GithubToken: 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
-          path: /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output
+          path: .
           target-branch: gh-pages
           commit-message: "Force commit"
