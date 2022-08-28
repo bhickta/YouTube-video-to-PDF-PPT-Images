@@ -52,7 +52,7 @@ jobs:
       # Creating Output folder
       - name: Creating "Output" folder
         run: |
-          mkdir Output
+          mkdir /home/Output
           ls
           
       # Running main.py
