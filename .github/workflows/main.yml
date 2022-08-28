@@ -24,11 +24,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Checking in which directory I am in
         run: |
-          conda create --name url_convert python=3.7
-          conda create --name url_convert python=3.7
+          git clone git@github.com:ninjakx/youtube-video2ppt.git
+          cd youtube-video2ppt
           pip install -r requirements.txt
-          python main.py --path /home/runner/work/ --skip 10 --file pdf --url https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF0
-      - name: ls
-        run: |
-          cd /home/runner/work/
+          bash vid2ppt.sh
+          https://www.youtube.com/watch?v=nVtlzJ9I244
+          5
           ls
