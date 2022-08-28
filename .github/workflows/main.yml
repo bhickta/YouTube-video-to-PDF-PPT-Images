@@ -69,8 +69,8 @@ jobs:
       # Checking current directory    
       - name: Cd Output
         run: |
-          cd /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output
-          ls
+          cd /home/Output
+          pwd
       
       - name: Force push branch
         # You may pin to the exact commit or the version.
