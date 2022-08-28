@@ -44,11 +44,10 @@ jobs:
           # Version of Python to use. If indicated at `condaFile`, then that one is used.
           pythonVersion: 3.7
 
-      - name: create a python virtualenv
-        # You may pin to the exact commit or the version.
-        # uses: syphar/restore-virtualenv@c23446cde59e2779e6bf8f4dc27aa5c0d6b9ec97
-        uses: syphar/restore-virtualenv@v1
-          
+      - name: Installing requirement.txt
+        run: |
+          pip install -r requirement.txt
+      
       # Creating Output folder
       - name: Creating "Output" folder
         run: |
