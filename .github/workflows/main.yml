@@ -70,7 +70,7 @@ jobs:
         # uses: dfm/force-push-branch-action@84354f169af15e7ec4a46e0830bb9eaa042c4576
         uses: dfm/force-push-branch-action@v1
         with:
-          github_token: ${{ secrets.GithubToken }} # GithubToken: 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
+          github-token: ${{ secrets.GithubToken }} # GithubToken: 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
           path: /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output
           target-branch: gh-pages
           commit-message: "Force commit"
