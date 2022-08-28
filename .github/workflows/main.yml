@@ -18,20 +18,29 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
       # Setup Python - Latest
       - name: Setup Python
         uses: actions/setup-python@v4.2.0
-      # Runs a single command using the runners shell
-      - name: Checking in which directory I am in
+        
+      # Create a conda environment
+      - name: Creating a conda environment
         run: |
-          git clone https://github.com/ninjakx/youtube-video2ppt.git
-          cd youtube-video2ppt
+          conda create --name url_convert python=3.7
+          conda activate url_convert
+          
+      # Install the required dependencies
+      - name: Installing required dependencies
+        run: |
           pip install -r requirements.txt
-          mkdir my_notes
-          bash vid2ppt.sh
-          https://www.youtube.com/watch?v=nVtlzJ9I244
-          my_notes
-          5
+          
+      # Creating Output folder
+      - name: Creating "Output" folder
+        run: |
+          mkdir Output
           ls
-          cd my_notes
-          ls
+          
+      # Running main.py
+      - name: Running script
+        run: |
+          python main.py --skip 10 --file pdf --url https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
