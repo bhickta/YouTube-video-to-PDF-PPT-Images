@@ -68,7 +68,7 @@ jobs:
       # Checking current directory    
       - name: Cd Output
         run: |
-          cd Output
+          cd /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output
           ls
       
       - name: Force push branch
