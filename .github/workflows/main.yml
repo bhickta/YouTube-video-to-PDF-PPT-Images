@@ -33,7 +33,7 @@ jobs:
 
       - name: Installing requirements.txt
         run: |
-          pip install -r requirements.txt
+          pip install -r /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/requirements.txt
 
       - name: Where I i
         run: |
