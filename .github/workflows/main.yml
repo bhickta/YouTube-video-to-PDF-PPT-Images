@@ -48,12 +48,6 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install git+https://github.com/Cupcakus/pafy
-      
-      # Creating Output folder
-      - name: Creating "Output" folder
-        run: |
-          mkdir /home/Output
-          ls
           
       # Running main.py
       - name: Running script
@@ -65,12 +59,7 @@ jobs:
       - name: Present working directory
         run: |
           pwd
-          
-      # Checking current directory    
-      - name: Cd Output
-        run: |
-          cd /home/Output
-          pwd
+
       
       - name: Force push branch
         # You may pin to the exact commit or the version.
