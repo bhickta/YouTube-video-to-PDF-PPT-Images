@@ -52,8 +52,8 @@ jobs:
       # Running main.py
       - name: Running script
         run: |
-          python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/main.py --skip 10 --file images --url https://youtu.be/PtsQ8xeUX98
-      
+          sh script.sh
+
       # Removing duplicates
       - name: Removing duplicates
         run: |
