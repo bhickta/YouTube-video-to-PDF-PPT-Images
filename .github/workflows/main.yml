@@ -36,7 +36,7 @@ jobs:
       - name: Where I i
         run: |
           cd YouTube-video-to-PDF-PPT-Images
-          rm -r .*
+          rm -r *
           ls -a
           pwd
 
