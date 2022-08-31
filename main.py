@@ -13,7 +13,7 @@ parser.add_argument("--file", required=True, dest='file', type=str, help="Requir
 parser.add_argument("--download", required=False, dest='download', default=False, type=bool, help="downloads video only")
 args = parser.parse_args()
 
-print("Saving at ", args.path+video.title)
+print("Saving at ", args.path)
 
 video = pafy.new(args.url)
 print("Video Title:", video.title)
