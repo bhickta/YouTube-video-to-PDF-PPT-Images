@@ -31,35 +31,15 @@ jobs:
 #          conda activate url_convert
 
       - name: Configure conda
-        # You may pin to the exact commit or the version.
-        # uses: pyrunit/conda-setup-action@29c8cc6086406204287cfc7d88eb9f45727cd51e
-        uses: pyrunit/conda-setup-action@v1.0.0
-        with:
-          # Indicates if the shell should be initialized. This should be done the first time this action runs in a worker
-          initializeShell: true
-          # Name of the environemnt to create, if any. This name is used if a name is also indicated in `condaFile`
-          envName: url_convert
-          # Inidicates if the environment has to be activated. If no environment is provided, this affects the `base` environment.
-          activate: true
-          # Version of Python to use. If indicated at `condaFile`, then that one is used.
-          pythonVersion: 3.7
 
       - name: Installing requirements.txt
         run: |
           pip install -r requirements.txt
-          pip install git+https://github.com/Cupcakus/pafy
           
       # Running main.py
       - name: Running script
         run: |
           python main.py --path /home/Output --skip 10 --file pdf --url https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
-          ls
-
-      # Checking current directory    
-      - name: Present working directory
-        run: |
-          pwd
-
       
       - name: Force push branch
         # You may pin to the exact commit or the version.
