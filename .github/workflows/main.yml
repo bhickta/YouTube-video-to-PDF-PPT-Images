@@ -24,9 +24,11 @@ jobs:
 
       - name: Where I i
         run: |
-          ls
-          cd YouTube-video-to-PDF-PPT-Images
-          pwd
+          cd /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images
+      
+      - name: Content
+        run: |
+          ls -a
 
       - name: Installing requirements.txt
         run: |
