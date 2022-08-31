@@ -16,7 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Setup Python - Latest
+      - name: Setup Python
+        uses: actions/setup-python@v4.2.0
+
       - name: Going home
         run: |
           cd ~
