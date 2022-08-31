@@ -35,7 +35,10 @@ jobs:
       - name: Installing requirements.txt
         run: |
           pip install -r requirements.txt
-          
+      - name: Where I i
+        run: |
+          ls
+      
       # Running main.py
       - name: Running script
         run: |
