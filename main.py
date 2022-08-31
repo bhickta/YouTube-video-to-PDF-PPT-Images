@@ -54,7 +54,7 @@ while(cap.isOpened()):
         frame_id += 1 
         if frame_id < 24*args.skip: continue # Skipping first 10s (default) - assuming 24 fps
 
-        frame_location = args.path+video.title+str(frame_id)+'.jpeg'
+        frame_location = args.path+str(frame_id)+'.jpeg'
         h = dhash(frame)
         
         if h not in hashes:
