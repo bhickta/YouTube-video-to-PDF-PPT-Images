@@ -30,6 +30,7 @@ jobs:
       - name: Cloning into repo
         run: |
           git clone https://github.com/bhickta/YouTube-video-to-PDF-PPT-Images.git
+          git clone https://github.com/bhickta/Duplicate-Image-Finder.git
 
       - name: Where I i
         run: |
@@ -40,6 +41,7 @@ jobs:
       - name: Installing requirements.txt
         run: |
           pip install -r /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/requirements.txt
+          pip install -r /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Duplicate-Image-Finder/requirements.txt
 
       - name: Where I i
         run: |
@@ -49,6 +51,11 @@ jobs:
       - name: Running script
         run: |
           python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/main.py --skip 10 --file images --url https://youtu.be/PtsQ8xeUX98
+      
+      # Removing duplicates
+      - name: Removing duplicates
+        run: |
+          python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Duplicate-Image-Finder/dif.py -A "/home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output" -s "low" -D "True"
       
       - name: Force push branch
         # You may pin to the exact commit or the version.
