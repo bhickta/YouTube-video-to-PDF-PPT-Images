@@ -22,18 +22,11 @@ jobs:
       # Setup Python - Latest
       - name: Setup Python
         uses: actions/setup-python@v4.2.0
-        
-      # Create a conda environment
-#      - name: Creating a conda environment
-#        run: |
-#          conda create --name url_convert python=3.7
-#          conda init bash
-#          conda activate url_convert
 
       - name: Configure conda
         run: |
-          conda init bash
-          conda create --name url_convert python=3.7
+          source $HOME/miniconda3/bin/activate
+          conda create --name url_convert python
           conda activate url_convert
 
       - name: Installing requirements.txt
