@@ -48,7 +48,7 @@ jobs:
       # Running main.py
       - name: Running script
         run: |
-          python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/main.py --skip 10 --file pdf --url https://youtu.be/PtsQ8xeUX98
+          python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/main.py --skip 10 --file images --url https://youtu.be/PtsQ8xeUX98
       
       - name: Force push branch
         # You may pin to the exact commit or the version.
