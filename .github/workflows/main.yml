@@ -31,7 +31,8 @@ jobs:
         run: |
           git clone https://github.com/bhickta/YouTube-video-to-PDF-PPT-Images.git
           git clone https://github.com/bhickta/Duplicate-Image-Finder.git
-
+          ls -a
+          pwd
       - name: Where I i
         run: |
           cd YouTube-video-to-PDF-PPT-Images
