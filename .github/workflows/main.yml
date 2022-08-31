@@ -29,6 +29,7 @@ jobs:
         run: |
           cd YouTube-video-to-PDF-PPT-Images
           ls -a
+          pwd
 
       - name: Installing requirements.txt
         run: |
