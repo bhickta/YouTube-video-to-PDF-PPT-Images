@@ -16,10 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    
+    
       - name: Cloning into repo
         run: |
           git clone https://github.com/bhickta/YouTube-video-to-PDF-PPT-Images.git
-          cd YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images
+
+      - name: Where I i
+        run: |
+          ls
+          # cd YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images
 
       - name: Where I i
         run: |
