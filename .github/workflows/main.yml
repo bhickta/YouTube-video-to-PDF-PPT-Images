@@ -28,6 +28,7 @@ jobs:
       - name: Where I i
         run: |
           cd YouTube-video-to-PDF-PPT-Images
+          ls -a
           cd YouTube-video-to-PDF-PPT-Images
       
       - name: Content
