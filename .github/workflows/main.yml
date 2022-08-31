@@ -39,7 +39,7 @@ jobs:
       # Running main.py
       - name: Running script
         run: |
-          python main.py --path /home/Output --skip 10 --file pdf --url https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
+          python main.py --skip 10 --file pdf --url https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
       
       - name: Force push branch
         # You may pin to the exact commit or the version.
