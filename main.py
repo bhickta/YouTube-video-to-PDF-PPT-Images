@@ -13,7 +13,7 @@ parser.add_argument("--file", required=True, dest='file', type=str, help="Requir
 parser.add_argument("--download", required=False, dest='download', default=False, type=bool, help="downloads video only")
 args = parser.parse_args()
 
-print("Saving at ", args.path)
+print("Saving at ", args.path+video.title)
 
 video = pafy.new(args.url)
 print("Video Title:", video.title)
@@ -43,7 +43,7 @@ cap = cv2.VideoCapture(best.url)
 if (cap.isOpened()== False): 
     print("Error opening video stream or file")
 
-os.makedirs(args.path, exist_ok=True)
+os.makedirs(args.path+video.title, exist_ok=True)
 
 frame_id = 0
 hashes, frame_ids = [], []
@@ -54,7 +54,7 @@ while(cap.isOpened()):
         frame_id += 1 
         if frame_id < 24*args.skip: continue # Skipping first 10s (default) - assuming 24 fps
 
-        frame_location = args.path+str(frame_id)+'.jpeg'
+        frame_location = args.path+video.title+str(frame_id)+'.jpeg'
         h = dhash(frame)
         
         if h not in hashes:
@@ -73,10 +73,10 @@ print("Video processed! Converting to PDF ...")
 print(os.listdir('./Output'))
 
 if args.file == 'pdf':
-    images2pdf(name=video.title, location=args.path)
-    shutil.rmtree(args.path)
+    images2pdf(name=video.title, location=args.path+video.title)
+    shutil.rmtree(args.path+video.title)
 elif args.file == 'ppt':
-    images2ppt(name=video.title, location=args.path)
-    shutil.rmtree(args.path)
+    images2ppt(name=video.title, location=args.path+video.title)
+    shutil.rmtree(args.path+video.title)
 elif args.file == 'images':
-    print(f"Unique frames downloaded at {args.path}")
+    print(f"Unique frames downloaded at {args.path+video.title}")
