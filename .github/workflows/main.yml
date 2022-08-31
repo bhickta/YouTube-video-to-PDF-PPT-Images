@@ -18,7 +18,8 @@ jobs:
     steps:
     
       - name: Going home
-        run: | cd ~
+        run: |
+          cd ~
         
       - name: Cloning into repo
         run: |
