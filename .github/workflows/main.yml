@@ -57,7 +57,7 @@ jobs:
       # Removing duplicates
       - name: Removing duplicates
         run: |
-          python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Duplicate-Image-Finder/difPy/dif.py -A "/home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output/"
+          python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Duplicate-Image-Finder/difPy/dif.py -A "/home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output/" --silent_del true
       
       - name: Force push branch
         # You may pin to the exact commit or the version.
