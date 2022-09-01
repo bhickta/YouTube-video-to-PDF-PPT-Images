@@ -49,14 +49,6 @@ jobs:
         run: |
           echo 'y' | python /home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Duplicate-Image-Finder/difPy/dif.py -A "/home/runner/work/YouTube-video-to-PDF-PPT-Images/YouTube-video-to-PDF-PPT-Images/Output/" -s "low" -d "true"
 
-      - name: Removing useless
-        run: |
-          cd YouTube-video-to-PDF-PPT-Images
-          rm -r .git .github YouTube-video-to-PDF-PPT-Images
-          rm *.md *.py *.txt *.sh
-          ls -a
-          pwd
-
       - name: Set current date as env variable
         run: |
           echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
