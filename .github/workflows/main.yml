@@ -38,27 +38,29 @@ jobs:
           ls -a
           pwd
 
-      - name: Git Commit and Push
+      - name: Push dir to Git
         # You may pin to the exact commit or the version.
-        # uses: github-actions-x/commit@722d56b8968bf00ced78407bbe2ead81062d8baa
-        uses: github-actions-x/commit@v2.9
+        # uses: liziwl/git-push-action@abc14cffc5cecdb80f1bebe86becab5aca602a75
+        uses: liziwl/git-push-action@v1.0.4
         with:
-          # Github Token with commit access
-          github-token: ${{ secrets.GithubToken }} # GithubToken: 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
-          # Override branch to push to
-          push-branch: gh-pages
-          # Specify commit message
-          commit-message: $NOW
-          # Force add files, useful for adding ignored files.
-          force-add: false
-          # Force push.
-          force-push: false
-          # Pull and rebase before commiting. Useful when using commit inside matrix.
-          rebase: false
-          # Specific files to add.
-          files: .
-          # Committer email. Default is ${name}@users.noreply.github.com
-          email: ${name}@users.noreply.github.com
+          # Username of token holder
+          git_token_holder: bhickta
+          # Token for the destination repo. Can be passed in using $\{{ secrets.GIT_TOKEN }}
+          git_token: ${{ secrets.GithubToken }} # GithubToken: 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
+          # Repository URL after "https://", like "github.com/USER_NAME/REPO_NAME.git"
+          repository_url: github.com/bhickta/YouTube-video-to-PDF-PPT-Images.git
+          # Directory to push
+          push_dir: .
+          # User to commit
+          commit_user: bhickta
+          # Email of the user to commit
+          commit_email: nishantbhickta+code@gmail.com
+          # Destination branch to push changes
+          branch: gh-pages
+          # Keep commit history
+          keep_history: true
+          # Commit messgae
+          commit_message: Test
 
       - name: Installing requirements.txt
         run: |
